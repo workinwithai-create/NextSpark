@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextSpark — Live Finish Desk</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1>NextSpark</h1>
+    <p>Four-bar live spark desk · next level. Add life to static loops. Free.</p>
+  </header>
+  <div id="tap-overlay" class="overlay">Tap anywhere to start audio</div>
+  <main>
+    <section class="controls">
+      <label>BPM <input type="number" id="bpm" min="60" max="180" value="98"></label>
+      <label>Key <input type="text" id="key" value="A minor"></label>
+      <label>Chords <input type="text" id="chords" value="Am F C G" placeholder="Am F C G"></label>
+      <div class="chairs">
+        <span>Chairs:</span>
+        <label><input type="checkbox" id="mute-kick" checked> Kick</label>
+        <label><input type="checkbox" id="mute-snare" checked> Snare</label>
+        <label><input type="checkbox" id="mute-hat" checked> Hat</label>
+        <label><input type="checkbox" id="mute-bass" checked> Bass</label>
+        <label><input type="checkbox" id="mute-piano" checked> Piano</label>
+        <label><input type="checkbox" id="mute-guitar" checked> Guitar</label>
+      </div>
+    </section>
+    <section id="recipes" class="recipes"></section>
+    <div id="bars" class="bars"></div>
+    <div id="grid" class="grid"></div>
+    <section class="transport">
+      <button id="play">Play</button>
+      <button id="stop">Stop</button>
+      <button id="exportWav">Export WAV (folded)</button>
+      <button id="exportWavTail">Export WAV (with tail)</button>
+      <button id="exportMid">Export MIDI</button>
+      <button id="copy">Copy punch</button>
+    </section>
+    <pre id="punch"></pre>
+    <div id="status">Loading…</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
